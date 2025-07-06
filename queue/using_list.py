@@ -1,16 +1,34 @@
-class Queue:
-    def __init__(self):
+class queue:
+    def __init__(self): 
         self.items = []
-        def is_empty(self):
-            return self.items == []
-        def enqueue(self, item):
-         self.items.insert()
-         def dequeue(self):
-            return self.item.pop(0)
-         def get_front(self):
+        self.front = None
+        self.rear = None
+    def is_empty(self):
+        return len(self.items)==0
+    def enqueue(self,data):
+      self.items.append(data)
+    def dequeue(self):
+        if self.is_empty():
+            raise IndexError("Queue is empty")
+        else:
+            return self.items.pop(0)
+    def get_front(self):
+        if self.is_empty():
+            raise IndexError("Queue is empty")
+        else:
             return self.items[0]
-         def get_rear(self):
+    def get_rear(self):
+        if self.is_empty():
+            raise IndexError("Queue is empty")
+        else:
             return self.items[-1]
-         
-         def size(self):
-            return len(self.items)
+    def size(self):
+        return len(self.items)
+q1 = queue()
+q1.enqueue(1)
+q1.enqueue(2)
+q1.enqueue(3)
+q1.dequeue()
+print(q1.get_front())
+print(q1.get_rear())
+print(q1.size())
