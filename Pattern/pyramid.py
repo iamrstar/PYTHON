@@ -14,3 +14,4 @@ for i in range(rows - 2, -1, -1):
     print(spaces + stars)
 
 
+    
