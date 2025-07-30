@@ -23,6 +23,16 @@ def merge_sort(data_list):
         while i < len(left):
             data_list[k] = left[i]
             i += 1
+            k += 1
      
+        while j < len(right):
+            data_list[k] = right[j]
+            j += 1
+            k += 1
+
+    return data_list
+myList = [54,26,93,17,77,31,44,55,20]
+print(merge_sort(myList))
+
 
  
