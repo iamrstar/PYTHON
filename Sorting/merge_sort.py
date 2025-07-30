@@ -11,17 +11,18 @@ def merge_sort(data_list):
         j = 0
         k = 0
 
-        # while i < len(left) and j < len(right):
-        #     if left[i] < right[j]:
-        #         data_list[k] = left[i]
-        #         i += 1
-        #     else:
-        #         data_list[k] = right[j]
-        #         j += 1
-        #     k += 1
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                data_list[k] = left[i]
+                i += 1
+            else:
+                data_list[k] = right[j]
+                j += 1
+            k += 1
 
-        # while i < len(left):
-        #     data_list[k] = left[i]
-        #     i += 1
+        while i < len(left):
+            data_list[k] = left[i]
+            i += 1
      
 
+ 
